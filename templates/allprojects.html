@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Projects{% endblock %}
+{% block stylesheet %}<link rel="stylesheet" href="../static/css/allprojects.css">{% endblock stylesheet %}
+
+{% block Gname %}Web Development Projects{% endblock Gname %}
+{% block news %}
+<marquee behavior="" direction="">Currently Working an developing GFG_RGIPT website using Django and working on Advanced Math Calculator Developer. </marquee>
+{% endblock news %}
+{% block content %}
+<!-- partial:index.partial.html -->
+<main class="page-content">
+    <div class="card">
+        <div class="content">
+            <h2 class="title">Student Portfolio</h2>
+            <p class="copy">Explore my creative endeavors, and skills in this
+                student portfolio</p>
+            <a href="/"><button class="btn">Explore</button></a>
+            <a href="https://github.com/sanu0711/Portfolio"><button class="btn">GitHub</button></a>
+
+
+
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2 class="title">GFG_RGIPT SC Technical Head</h2>
+            <p class="copy">As the Technical Head for GFG_RGIPT SC,
+                overseeing the development of our chapter's website.
+            </p>
+            <a href="https://sites.google.com/rgipt.ac.in/geeksforgeeksrgipt/home"><button class="btn">Explore</button></a>
+            <a href="https://github.com/sanu0711/GFG_RGIPT-Student-Chapter"><button class="btn">GitHub</button></a>
+
+
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2 class="title">OnlineQuiz</h2>
+            <p class="copy"> the ultimate platform for hosting engaging and interactive quizzes!
+            </p>
+            <a href="{% url 'signup' %}"><button class="btn">Explore</button></a>
+            <a href="https://github.com/sanu0711/OnlineQuiz"><button class="btn">GitHub</button></a>
+            
+
+        </div>
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2 class="title">Online Banking System</h2>
+            <p class="copy">Encompassing
+                transactions, account openings, and loan processing.</p>
+                <a href="https://sanu0711.github.io/Bank-Of-Bajarang-Dal/index.html"><button class="btn">Explore</button></a>
+                <a href="https://github.com/sanu0711/Bank-Of-Bajarang-Dal"><button class="btn">GitHub</button></a>
+            </div>
+    </div>
+    <!-- <div class="card">
+        <div class="content">
+            <h2 class="title">Advanced Math Calculator Developer</h2>
+            <p class="copy">math calculator using Django, serving as a vital tool for various mathematical operations.
+            </p>
+            <a href="{% url 'randompassword' %}"><button class="btn">Explore</button></a>
+        </div>
+    </div> -->
+    <a href="{% url 'randompassword' %}"><button class="btn">Generate Random Password</button></a>
+
+</main>
+<!-- partial -->
+
+</body>
+
+</html>
+
+{% endblock %}

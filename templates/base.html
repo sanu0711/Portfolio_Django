@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %}{% endblock title %}</title>
+  <meta content="Abhishek Yadav" name="description">
+  <meta content="ॐ🔱༒यदुवंशी༒🔱 ॐ" name="keywords">
+  <meta content="Abhishek Yadav" name="author">
+
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/logoL1.png" rel="icon">
+  <link href="../static/assets/img/logoL1.png" rel="apple-touch-icon">
+  <link rel="shortcut icon" href="../static/assets/img/logoL1.png" type="image/x-icon">
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static './assets/css/style.css' %}" rel="stylesheet">
+  {% comment %} <link href="../static/assets/css/style.css" rel="stylesheet"> {% endcomment %}
+  {% block stylesheet %}{% endblock stylesheet %}
+  <style>
+    {% block style %}
+  
+  {% endblock style %}
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Green</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="/" class="logo me-auto"><img src="../static/assets/img/logoL1.png"
+          alt="logo" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
+          <li><a class="nav-link scrollto " href="{% url "allprojects" %}">Projects<span></span></a></li>
+          <li><a class="nav-link scrollto " href="https://github.com/sanu0711">Github<span></span></a></li>
+          <li><a class="nav-link scrollto " href="https://www.codechef.com/users/sanu711">Codechef<span></span></a></li>
+          <li><a class="nav-link scrollto " href="https://codeforces.com/profile/sanu0711">Codeforces<span></span></a>
+          </li>
+          <li><a class="nav-link scrollto "
+              href="https://www.hackerrank.com/profile/_sanu_0711">Hackerrank<span></span></a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  
+
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      {% block news %}
+      {% endblock news %}
+      <div class="container">
+        <!-- <h1>Django Projects</h1> -->
+        <h1 class="text-center">{% block Gname %}{% endblock Gname %}</h1>
+        <div class="d-flex justify-content-between align-items-center">
+
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        {% block content %}{% endblock content %}
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Follow Me</h3>
+      <div class="social-links">
+        <a href="https://twitter.com/_sanu_0711" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/_sanu_0711/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/abhishek-yadav-034825220/" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/sanu0711" class="GitHub"><i class="bx bxl-github"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Abhishek Yadav</span></strong>. All Rights Reserved
+      </div>
+      <p>ॐ🔱༒यदुवंशी༒🔱 ॐ</p>
+      <div class="credits">
+        <a href="https://github.com/sanu0711">Designed and Developed by Abhishek Yadav</a>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html

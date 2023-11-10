@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Result{% endblock %}
+{% block style %}
+  .centi{
+    text-align: center;
+    color: #000000;
+  {% endblock style %}
+{% block Gname %}<h1 >Result</h1>{% endblock Gname %}
+{% block content %}
+<body>
+    <h2>Name : {{name}}</h2>
+    <h3 class="centi">Your Score is:</h3>
+    <h3 class="centi">{{score}}/10</h3>
+    <h5>Your Correct Answers:</h5>
+    {% for i in option %}
+    <h6>{{i}}</h3>
+    {% endfor %}
+    <h5>Submissions</h5>
+    {% for i in stusubm %}
+    <h6>{{i}}</h3>
+    {% endfor %}
+</body>
+{% endblock content %}

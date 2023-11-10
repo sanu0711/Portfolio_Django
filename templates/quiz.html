@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="{{timeleft}}">
+    <title>OnlineQuiz</title>
+    <link href="../static/assets/img/logoL1.png" rel="icon">
+    <link href="../static/assets/img/logoL1.png" rel="apple-touch-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        .qust{
+            text-align: left;
+            padding: 5%;
+
+        }
+        .submit{
+            text-align: center;
+        }
+        }
+    </style>
+</head>
+
+    <h1>Online Quiz</h1>
+    <h2 id="countdown"></h2> 
+    <h1></h1>
+    <div class="qust"> 
+    <h1>{{question}}</h1>    
+    <form method="post">
+        {% csrf_token %}        
+        <h2><input type="radio" name="ans" value="{{option1}}"><label for="radio"> {{option1}} </label> </h2>
+        <h2><input type="radio" name="ans" value="{{option2}}"><label for="radio"> {{option2}} </label> </h2>
+        <h2><input type="radio" name="ans" value="{{option3}}"><label for="radio"> {{option3}} </label> </h2>
+        <h2><input type="radio" name="ans" value="{{option4}}"><label for="radio"> {{option4}} </label> </h2>
+        <div class="submit"><input type="submit"></div> 
+    </form>
+    </div>
+
+   
+  <script type="text/javascript">
+        var timeLeft = {{timeleft}};
+        function updateCountdown() {
+            document.getElementById("countdown").innerHTML = timeLeft + " seconds left";
+            timeLeft--;
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "Time's up!";
+            }
+        }
+        var timer = setInterval(updateCountdown, 1000);
+    </script> 
+
+</body>
+
+</html>

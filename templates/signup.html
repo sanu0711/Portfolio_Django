@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}signup{% endblock %}
+{% block Gname %}<h1>Signup</h1>{% endblock Gname %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form method="post">
+        {% csrf_token %}
+        {% comment %} <label for="name">Name</label> {% endcomment %}
+        <input type="text" name="name" placeholder="Name"><br><br>
+        {% comment %} <label for="username">User</label> {% endcomment %}
+        <input type="text" name="username" placeholder="Username"><br><br>
+        {% comment %} <label for="email">Email</label> {% endcomment %}
+        <input type="email" name="email" id="email" placeholder="Email"><br><br>
+        {% comment %} <label for="phone">Mobile No.</label> {% endcomment %}
+        <input type="text" name="phone" id="phone" placeholder="Mobile No."><br><br>
+        {% comment %} <label for="password">password</label> {% endcomment %}
+        <input type="password" name="password" placeholder="Password"><br><br>
+        <input type="submit" value="Signup">
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</body>
+
+</html>
+{% endblock%}
